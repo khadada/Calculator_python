@@ -32,11 +32,11 @@ operators = {
     '%': modu,
 }
 def calculator():
-    num1 = int(input('Entre first number:  '))
+    num1 = float(input('Entre first number:  '))
     for op in operators:
         print(f'[{op}]')
     operator_chosed = input('Pick one of this operators above: ')
-    num2 = int(input('Entre second number:  '))
+    num2 = float(input('Entre second number:  '))
     result1 = operators[operator_chosed](num1, num2)
     print(f'{num1} {operator_chosed} {num2} = {result1}')
     then = True
@@ -50,7 +50,7 @@ def calculator():
             for op in operators:
                 print(f'[{op}]')
             pick_next_op = input('Pick one of this operators above: ')
-            num3 = int(input('Entre next number:  '))
+            num3 = float(input('Entre next number:  '))
             result2 = operators[pick_next_op](result1, num3)
             print(f'{result1} {pick_next_op} {num3} = {result2}')
             result1 = result2
